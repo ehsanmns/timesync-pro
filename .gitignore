@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Build artifacts (if any)
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local env (not needed for this project, but good practice)
+.env
+.env.local
+
+# Backup files
+*~
