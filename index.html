@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TimeSync Pro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TimeSync Pro</h1>
+      <p>Find the perfect meeting time across time zones.</p>
+    </header>
+
+    <!-- Add Member Form -->
+    <section class="form-section">
+      <h2>Add Team Member</h2>
+      <form id="member-form">
+        <input type="text" id="member-name" placeholder="Name" required />
+        <select id="timezone" required></select>
+        <div class="weekdays">
+          <label><input type="checkbox" value="1" checked /> Mon</label>
+          <label><input type="checkbox" value="2" checked /> Tue</label>
+          <label><input type="checkbox" value="3" checked /> Wed</label>
+          <label><input type="checkbox" value="4" checked /> Thu</label>
+          <label><input type="checkbox" value="5" checked /> Fri</label>
+          <label><input type="checkbox" value="6" /> Sat</label>
+          <input type="checkbox" value="0" id="sunday" />
+          <label for="sunday">Sun</label>
+        </div>
+        <div class="time-range">
+          <label>
+            Work hours:
+            <input type="time" id="work-start" value="09:00" />
+            to
+            <input type="time" id="work-end" value="17:00" />
+          </label>
+        </div>
+        <button type="submit">Add Member</button>
+        <button type="button" id="save-edit-btn">Save Changes</button>
+      </form>
+    </section>
+
+    <!-- Members List -->
+    <section class="members-section">
+      <h2>Team Members</h2>
+      <ul id="members-list"></ul>
+    </section>
+
+    <!-- Meeting Duration -->
+    <section class="duration-section">
+      <label>
+        Meeting duration:
+        <select id="meeting-duration">
+          <option value="30">30 minutes</option>
+          <option value="60" selected>1 hour</option>
+          <option value="120">2 hours</option>
+        </select>
+      </label>
+      <button id="find-slots">Find Common Slots</button>
+    </section>
+
+    <!-- Heatmap -->
+    <section class="heatmap-section">
+      <h2>Common Availability (Heatmap)</h2>
+      <div id="heatmap-container"></div>
+    </section>
+
+    <!-- Share Link -->
+    <section class="share-section">
+      <h2>Share This Session</h2>
+      <div class="link-box">
+        <input type="text" id="share-link" readonly />
+        <button id="copy-link">Copy Link</button>
+      </div>
+    </section>
+
+    <!-- Tooltip for hover -->
+    <div id="tooltip" class="tooltip hidden"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
